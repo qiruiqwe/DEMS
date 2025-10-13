@@ -1,7 +1,5 @@
 # Action Coupling in Energy Scheduling: A Linear Genetic Programming Approach for Adaptive and Interpretable Control
 
-This repository contains the official Python 3.9 implementation for the paper: **Action Coupling in Energy Scheduling: A Linear Genetic Programming Approach for Adaptive and Interpretable Control**.
-
 ## Introduction
 
 In modern energy scheduling systems, achieving adaptive and interpretable control is a significant challenge. This paper proposes a novel approach using Linear Genetic Programming (LGP) to address the problem of action coupling in complex energy scheduling environments. Our method evolves interpretable control policies that can effectively manage interdependencies between actions, leading to more robust and efficient scheduling solutions.

@@ -11,8 +11,6 @@ import sys
 from tqdm import tqdm
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-# sys.path.append("E:\博士阶段文件\001 我的论文\000 我的论文\007 ESS\RL-ADN-main")
-# print(sys.path)
 import numpy as np
 from multiprocessing import Pool
 import multiprocessing
@@ -95,7 +93,7 @@ def evaluate(individual, env, toolbox):
     funcs = individual
     all_rewards = []
     for _ in range(sample_nums):
-        rewards = process(funcs, env)  # 假设 process 函数接受一个函数列表并返回结果
+        rewards = process(funcs, env)
         all_rewards.append(rewards)
     return (np.mean(all_rewards),)
 
@@ -167,7 +165,6 @@ class Instruction:
         return self.name
 
 
-# 定义指令集（扩展支持多维输入）
 instructions = [
     Instruction("add", ['register', 'register'], 'register'),
     Instruction("sub", ['register', 'register'], 'register'),
@@ -505,5 +502,5 @@ if __name__ == "__main__":
             args.long_term_eval_days = 1
             args.run_name = run_name
             args.node_count = node_count
-            print(f"Run name: {args.run_name}")  # 输出运行名称
+            print(f"Run name: {args.run_name}")
             main(args)

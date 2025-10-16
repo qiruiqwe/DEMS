@@ -10,8 +10,6 @@ import sys
 from tqdm import tqdm
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-# sys.path.append("E:\博士阶段文件\001 我的论文\000 我的论文\007 ESS\RL-ADN-main")
-# print(sys.path)
 import numpy as np
 from multiprocessing import Pool
 import multiprocessing
@@ -44,7 +42,7 @@ def random_fun():
 
 def multi_class(action_value, n=3):
     action_value = max(-1, min(action_value, 1))
-    class_values = np.linspace(-1, 1, n)  # 生成 n 个等间隔整数值
+    class_values = np.linspace(-1, 1, n) 
     return int(round(min(class_values, key=lambda x: abs(x - action_value))))
 
 
@@ -515,5 +513,5 @@ if __name__ == "__main__":
             args.long_term_eval_days = 1
             args.run_name = run_name
             args.data_path = data_path
-            print(f"Run name: {args.run_name}, data_paths: {args.data_path}, time_limit: {args.time_limit}")  # 输出运行名称
+            print(f"Run name: {args.run_name}, data_paths: {args.data_path}, time_limit: {args.time_limit}") 
             main(args)

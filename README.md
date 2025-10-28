@@ -1,4 +1,4 @@
-# Action Coupling in Energy Scheduling: A Linear Genetic Programming Approach for Adaptive and Interpretable Control
+# A Linear Genetic Programming Method for Adaptive and Interpretable Energy Scheduling
 
 ## Introduction
 

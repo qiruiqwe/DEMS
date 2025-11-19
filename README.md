@@ -14,6 +14,21 @@ This repository provides the source code to reproduce the experiments and result
 -   **Interpretability**: The resulting LGP-based controllers are inherently interpretable, allowing for clear analysis of the learned scheduling policies.
 -   **Reproducibility**: All necessary code and instructions are provided to replicate the findings of our study.
 
-## Requirements
+## Runtime Environment
 
 The code is written in Python 3.9. 
+
+| Component   | Version (minimum) | Notes                                      |
+|-------------|-------------------|--------------------------------------------|
+| Python      | 3.9.x             | Not tested on ≤ 3.8                        |
+| PyTorch     | 2.1.0             | Both CPU & CUDA 11.8 wheels supported      |
+| Gymnasium   | 0.29.0            | Official successor to OpenAI Gym           |
+| Numba       | ≥ 0.60.0          | Accelerates core numerical loops           |
+| pybind11    | ≥ 2.12            | Required only if re-compiling C++ extensions|
+| matplotlib  | latest            | Used for plotting results                  |
+
+## One-line Installation
+```bash
+conda create -n myenv python=3.9 -y && conda activate myenv
+pip install torch==2.1.0 gymnasium==0.29.0
+pip install "numba>=0.60.0" "pybind11>=2.12" matplotlib

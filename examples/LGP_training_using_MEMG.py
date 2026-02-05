@@ -130,7 +130,7 @@ def evaluate_test(individual, env, toolbox):
 
     funcs = individual
     for idx in range(sample_nums):
-        env.idx = idx
+        env.day = idx
         day_cost = process(funcs, env)
         all_rewards[idx] = day_cost
         print(f'{idx}/{sample_nums} day finish !!!')
